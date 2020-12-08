@@ -1,15 +1,16 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <string>
 
-std::vector<int> readInput() {
-    std::vector<int> result;
+std::vector<std::string> readInput() {
+    std::vector<std::string> result;
     std::string line;
     std::fstream inputFile {"input"};
 
     if (inputFile.is_open()) {
         while (getline(inputFile, line)) {
-            result.push_back(std::stoi(line));
+            result.push_back(line);
         }
     }
 
